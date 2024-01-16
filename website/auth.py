@@ -1,9 +1,17 @@
 from flask import Blueprint
 
-# defining urls in the file 
-# recomendet to name as file 
 auth = Blueprint('auth', __name__)
 
-@auth.route('/auth')
-def authentication():
-    return '<h2>im auth</h2>'
+@auth.route('/login')
+def login():
+    return '<h2>login</h2>'
+
+
+@auth.route('/logout')
+def logout():
+    return '<h2>logout</h2>'
+
+@auth.route('/sign-up')
+def sign_up():
+    return '<h2>sign up</h2>'
+
