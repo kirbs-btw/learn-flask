@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 # defining urls in the file 
 # recomendet to name as file 
@@ -9,5 +9,5 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
     # the retrun gives the output of the site - i think
-    return "<h1> Hello World </h1>"
+    return render_template("home.html")
     
