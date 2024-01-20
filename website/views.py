@@ -11,3 +11,13 @@ def home():
     # the retrun gives the output of the site - i think
     return render_template("home.html")
     
+@views.route('/name/<string:name>/')
+def namedrop(name):
+    # the retrun gives the output of the site - i think
+    return name
+
+    
+@views.route('/num/<int:num>/')
+def numdrop(num):
+    # the retrun gives the output of the site - i think
+    return str(int(num)+10)
